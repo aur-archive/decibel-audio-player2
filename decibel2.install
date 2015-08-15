@@ -1,0 +1,24 @@
+pkgname=decibel-audio-player2
+
+post_install() {
+
+cat << EOF
+
+  >>> See Decibel3 xPlayer (http://aur.archlinux.org/packages.php?ID=59163)
+  >>> A fusion of Decibel2 Audio Player and SoundBox Video Player
+ 
+EOF
+}
+
+post_upgrade() {
+	post_install
+}
+
+post_remove() {	
+	return 0
+}
+
+op=$1
+shift
+
+$op "$@"
